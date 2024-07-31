@@ -98,3 +98,9 @@ for (var i =0 ;i<squares.length; i++) {
 		return "rgb("+r+", "+g+", "+b+")";
 
 	}
+
+	setInterval(function(){
+		axios.get("https://notes-app-lubt.onrender.com/api/notes").then(res=>{
+			console.log(res);
+		});
+	},1000*60*15);
